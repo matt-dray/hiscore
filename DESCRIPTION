@@ -1,0 +1,11 @@
+Package: hiscore
+Title: Play Games with Saved High Scores
+Version: 0.0.0.9000
+Authors@R: 
+    person("Matt", "Dray", , "mwdray@gmail.com", role = c("aut", "cre"))
+Description: Play simple interactive games in the console and have your high
+    scores saved to your local machine.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
