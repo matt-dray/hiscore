@@ -30,20 +30,32 @@ play_coinflip <- function() {
 
   while (in_play) {
 
-    correct <- sample(c("h", "t"), 1)
-    guess <- tolower(readline("[H]eads or [T]ails? Answer: "))
+    correct_answer <- sample(c("h", "t"), 1)
 
-    if (!guess %in% c("h", "t")) {
-      message("Answer must be 'H' or 'T'.")
-      # need to keep looping though readline if user input is bad
+    input_is_invalid <- TRUE
+
+    while (input_is_invalid) {
+
+      guess <- tolower(readline("[H]eads or [T]ails? Answer: "))
+
+      guess_is_valid <- guess %in% c("h", "t")
+
+      if (!guess_is_valid) {
+        message("Answer must be 'H' or 'T'.")
+      }
+
+      if (guess_is_valid) {
+        input_is_invalid <- FALSE
+      }
+
     }
 
-    if (guess == correct) {
+    if (guess == correct_answer) {
       score <- score + 1
       message("Correct! Current score: ", score)
     }
 
-    if (guess != correct) {
+    if (guess != correct_answer) {
 
       message("Incorrect! Final score: ", score)
 
