@@ -1,8 +1,8 @@
 #' Play a Coinflip Game
 #'
-#' An interactive game in the console. The user guesses heads or tials by typing
-#' 'H' or 'T'. The maximum run is saved as a high score. THe user can also
-#' choose to save their game and return later.
+#' A simple interactive game of chance in the console. The user guesses heads or
+#' tails by typing 'H' or 'T'. The best streak is saved as a high score, which
+#' is saved to the user's computer and is persistent between sessions.
 #'
 #' @return Nothing.
 #'
